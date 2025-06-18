@@ -1,13 +1,17 @@
-// Replace with your actual Firebase config from Firebase Console
+// Firebase configuration for manager-venituri3
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_DOMAIN.firebaseapp.com",
-  databaseURL: "https://YOUR_PROJECT.firebaseio.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_BUCKET.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyCX9mMtVjoW0GeG9xFTcCideyyqQK0R6QM",
+  authDomain: "manager-venituri3.firebaseapp.com",
+  projectId: "manager-venituri3",
+  storageBucket: "manager-venituri3.firebasestorage.app",
+  messagingSenderId: "407482064898",
+  appId: "1:407482064898:web:ce18efe85f685cf03a471b",
+  measurementId: "G-JK7QT9TXRY"
 };
 
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+// Initialize Firebase only once
+if (typeof firebase === 'undefined') {
+  console.warn('Firebase SDK not loaded');
+} else if (!firebase.apps.length) {
+  firebase.initializeApp(firebaseConfig);
+}
