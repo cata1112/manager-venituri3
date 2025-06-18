@@ -1,4 +1,11 @@
-// Firebase configuration for manager-venituri3
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyCX9mMtVjoW0GeG9xFTcCideyyqQK0R6QM",
   authDomain: "manager-venituri3.firebaseapp.com",
@@ -9,9 +16,6 @@ const firebaseConfig = {
   measurementId: "G-JK7QT9TXRY"
 };
 
-// Initialize Firebase only once
-if (typeof firebase === 'undefined') {
-  console.warn('Firebase SDK not loaded');
-} else if (!firebase.apps.length) {
-  firebase.initializeApp(firebaseConfig);
-}
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
